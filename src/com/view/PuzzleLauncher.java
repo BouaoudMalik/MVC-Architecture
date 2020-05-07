@@ -13,7 +13,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
-
+/**
+*classe qui lance l'ecran principale du jeu
+*/
 public class PuzzleLauncher extends JFrame implements ActionListener {
    JButton newGameButton,exitButton;
    Puzzle puzzle;
@@ -31,8 +33,8 @@ public class PuzzleLauncher extends JFrame implements ActionListener {
         super("Taquin Puzzle Game");
         this.puzzle=puzzle;
  
-        String pathToSound="livraison/src/ressources/son/game.wav";
-
+            String pathToSound="ressources/son/game.wav";
+     
             AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(pathToSound).getAbsoluteFile());
             Clip clip = AudioSystem.getClip();
             clip.open(audioInputStream);
@@ -40,28 +42,35 @@ public class PuzzleLauncher extends JFrame implements ActionListener {
             clip.start();
      
         
-        ImageIcon img = new ImageIcon("livraison/src/ressources/images/icone.jpg"); //pour creer une icone
+        ImageIcon img = new ImageIcon("ressources/images/icone.jpg"); //pour creer une icone
         this.setIconImage(img.getImage());
-        
 
-        String pathBackground="livraison/src/ressources/images/puzzle.jpg";
+        this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
+        String pathBackground="ressources/images/puzzle.jpg";
         ImageIcon background=new ImageIcon(pathBackground);
         JLabel label=new JLabel(background);
         label.setSize(dim);
         super.setSize(dim);
         Container cp=super.getContentPane();
         JPanel panel=new JPanel();
-        JPanel panelButtons=new JPanel();
+        
         newGameButton=new JButton("New Game");
+        newGameButton.setBackground(Color.DARK_GRAY);
+        newGameButton.setForeground(Color.lightGray);
         newGameButton.addActionListener(this);
-        exitButton=new JButton("Exit");
+
+        exitButton=new JButton("Exit Game");
+        exitButton.setBackground(Color.DARK_GRAY);
+        exitButton.setForeground(Color.lightGray);
         exitButton.addActionListener(this);
-        panelButtons.add(newGameButton);
-        panelButtons.add(exitButton);
+      
         panel.add(newGameButton);
         panel.add(exitButton);
+	panel.add(label);
+        panel.setBackground(Color.lightGray);
 
-        panel.add(label);
+        
         cp.add(panel);
         super.setVisible(true);
     }

@@ -25,13 +25,12 @@ public class Main {
 		System.out.println("Veuillez choisir le mode de jeu ? \n1- Interface Graphique \n2- Ligne de Commande");
 		int choix =sc.nextInt();
 		if(choix==1) {
-
-			try {
+try {
 			PuzzleLauncher puzzleLauncher=new PuzzleLauncher(puzzle);
 			}
-		catch(UnsupportedAudioFileException| IOException| LineUnavailableException e) {
-			System.out.println("erreur de chargement");
-		}
+catch(UnsupportedAudioFileException| IOException| LineUnavailableException e) {
+	System.out.println("erreur de chargement");
+}
 		}
 		else{
 		puzzle.afficheGrid();
@@ -42,8 +41,6 @@ public class Main {
 		System.out.println("--------");
 		int randomNumber=2;
 		puzzle.mixGrid(randomNumber);
-
-		System.out.println("debut du jeu : ");
 		puzzle.play();
 		}
 

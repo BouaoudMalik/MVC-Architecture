@@ -1,6 +1,9 @@
-package model;
+package test;
 
 
+import model.Direction;
+import model.Piece;
+import model.Puzzle;
 import org.junit.After;
 import org.junit.Test;
 
@@ -45,8 +48,8 @@ public class PuzzleTest{
     @Test
     public void getEmptyPiecePositionTest(){
         assertTrue("ça doit retourner True :"
-        ,emtyPiece.getCurrentPosition().equalPositions(emptyPieceTest.getCurrentPosition())
-        && emtyPiece.getFinalPosition().equalPositions(emptyPieceTest.getFinalPosition()));
+                ,emtyPiece.getCurrentPosition().equalPositions(emptyPieceTest.getCurrentPosition())
+                        && emtyPiece.getFinalPosition().equalPositions(emptyPieceTest.getFinalPosition()));
     }
 
     /**

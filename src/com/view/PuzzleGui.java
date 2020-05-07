@@ -58,7 +58,7 @@ public class PuzzleGui extends JFrame implements ActionListener {
 
 		super.setSize(this.dim);
 		super.setMinimumSize(this.dim);
-		super.setResizable(false);
+		super.setResizable(true);
 
 
 		pack();

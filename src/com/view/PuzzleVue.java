@@ -63,7 +63,7 @@ public class PuzzleVue extends JPanel implements EcouteurModel, MouseListener {
 	protected void paintComponent(Graphics g) {
 		
 		super.paintComponent(g);
-
+		this.setBackground(Color.lightGray);
 		int i=0;
 		int j=0;
 		int column=0,line=10,lineStr=50, columnStr=50,width=100, height=100;

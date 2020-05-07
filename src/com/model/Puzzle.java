@@ -258,10 +258,7 @@ public class Puzzle extends ModelEcoutable {
 
 			destination = this.radomInit();
 			puzzle = this.switchPieces(destination);
-			puzzle.afficheGrid();
-			System.out.println("the empy case is :"+puzzle.getEmptyPiece().toString());
-			System.out.println("movable pieces are :"+this.movablePiecesDirection());
-			System.out.println("------------");
+			
 			randomNumber--;
 			fireChangement();
 		}
@@ -287,10 +284,12 @@ public class Puzzle extends ModelEcoutable {
 		@SuppressWarnings("resource")
 		Scanner sc=new Scanner(System.in);
 		Puzzle puzzle=new Puzzle(this.n,this.m);
-		puzzle.mixGrid(10);
 		System.out.println("saved grid :");
+		puzzle.afficheGrid();
 		System.out.println("-------");
-		System.out.println("-------");
+		System.out.println("  **************   Debut du jeu  *****************");
+		puzzle.mixGrid(10);
+		
 		while(!puzzle.hasWon()) {
 			puzzle.afficheGrid();
 			System.out.print("direction possible ");
