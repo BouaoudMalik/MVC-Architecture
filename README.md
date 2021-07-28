@@ -12,6 +12,6 @@
 	2.java -jar taquin.jar
 
 ``Avant de quitter, on nettoie notre dossier dist, c'est-à-dire on supprime le dossier "ressources" déjà copié:``
-	3.rm -rf ressources 
+	rm -rf ressources 
 		
 
