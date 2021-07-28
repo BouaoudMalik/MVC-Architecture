@@ -1,16 +1,17 @@
-1-Lancement du puzzle:
+# Compilation et Lancement du jeu : 
 
-	-Se mettre dans src/com (le répértoire com)
-	-Lancer la commande "make pipeline " sur le terminal.
+### Lancement du jeu:
+1.Se mettre dans src/com (le répértoire com)
+2.Lancer la commande "make pipeline " sur le terminal.
 
 
-2- Lancement du jar exécutable:
-	-Se mettre dans livraison/dist (le répértoire dist)
-	-Lancer ces deux commandes sur le terminal:
+### Lancement du jar exécutable:
+	1.Se mettre dans livraison/dist (le répértoire dist)
+#### Lancer ces deux commandes sur le terminal:
+1.cp -rf ../src/ressources ressources
+2.java -jar taquin.jar
 
-		1- cp -rf ../src/ressources ressources
-		2- java -jar taquin.jar
-	-Avant de quitter, on nettoie notre dossier dist, c'est-à-dire on supprime le dossier "ressources" déjà copié:
-		3- rm -rf ressources 
+``Avant de quitter, on nettoie notre dossier dist, c'est-à-dire on supprime le dossier "ressources" déjà copié:``
+3.rm -rf ressources 
 		
 
