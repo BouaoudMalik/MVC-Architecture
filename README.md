@@ -8,8 +8,8 @@
 ### Lancement du jar exécutable:
 	1.Se mettre dans livraison/dist (le répértoire dist)
 #### Lancer ces deux commandes sur le terminal:
-1.cp -rf ../src/ressources ressources
-2.java -jar taquin.jar
+	1.cp -rf ../src/ressources ressources
+	2.java -jar taquin.jar
 
 ``Avant de quitter, on nettoie notre dossier dist, c'est-à-dire on supprime le dossier "ressources" déjà copié:``
 3.rm -rf ressources 
